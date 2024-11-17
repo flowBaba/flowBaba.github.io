@@ -17,7 +17,8 @@
         body {
             font-family: 'Wotfard', sans-serif;
             margin: 0;
-            background: linear-gradient(120deg, #FFFDF6, #F8F9F2, #FFFCF8);
+            /* background: linear-gradient(120deg, #FFFDF6, #F8F9F2, #FFFCF8); */
+            background: linear-gradient(120deg, #FBFBFB, #F8F9F2, #FFFDFB);
 
             color: #222;
             overflow-x: hidden;
@@ -95,9 +96,13 @@
         }
 
         .cta {
-            margin-top: 30px;
+            /* margin-top: 30px; */
             display: flex;
             justify-content: flex-end;
+            flex-direction: row;
+            align-items: center;
+            padding: 20px;
+            /* gap: 20px; */
         }
 
         .cta a {
@@ -202,6 +207,98 @@
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
         }
 
+        .illustration section {
+            display: flex;
+            flex-direction: row;
+            /* Default: horizontal layout */
+            align-items: center;
+            padding: 20px;
+            gap: 20;
+            margin: 0 auto;
+            max-width: 90%;
+        }
+
+        .illustration section:nth-child(odd) {
+            flex-direction: row-reverse;
+            gap: 20;
+        }
+
+        .illustration section>div {
+            flex: 1;
+            /* Equal width for both image and description */
+            text-align: center;
+        }
+
+        .illustration section img {
+            max-width: 70%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        @media (max-width: 800px) {
+            .cta {
+                flex-direction: column;
+                /* Stack items vertically */
+                justify-content: center;
+                /* Center-align for better visibility */
+                align-items: center;
+                /* Ensure center alignment */
+            }
+
+            .cta a {
+                width: auto;
+                /* Ensure button adapts to content */
+                text-align: center;
+                /* Center-align text */
+            }
+        }
+
+
+        /* Responsive Layout for Smaller Screens */
+        @media (max-width: 768px) {
+            .illustration section {
+                flex-direction: column !important;
+                /* Stacks the items vertically */
+                text-align: center;
+                /* Centers content for better alignment */
+                gap: 10;
+            }
+
+            .illustration section>div {
+                width: 100%;
+                /* Ensure full width for both divs */
+            }
+
+            .illustration section img {
+                width: 80%;
+                /* Reduce image size for smaller screens */
+                margin: 0 auto;
+                /* Center the image */
+            }
+
+        }
+
+        @media (max-width: 480px) {
+            .illustration section img {
+                width: 90%;
+                /* Further reduce image size on very small screens */
+            }
+
+            .illustration h2 {
+                font-size: 1.8rem;
+                /* Adjust heading size */
+            }
+
+            .illustration p {
+                font-size: 1.2rem;
+                /* Adjust paragraph font size */
+            }
+        }
+
+
         .footer-section {
             margin-top: 40px;
             text-align: center;
@@ -280,13 +377,11 @@
     </div>
 
     <div class="illustration">
-        <section id="xc-recommendations"
-            style="display: flex; flex-direction: row-reverse; align-items: center; padding: 20px; margin-left: 10%; margin-right: 10%;">
-            <div style="flex: 1; text-align: center;">
-                <img src="./assets/distance-speed.webp" alt="XC Distance and Speed Recommendations"
-                    style="max-width: 80%; height: auto; border-radius: 10px; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);">
+        <section id="xc-recommendations">
+            <div>
+                <img src="./assets/distance-speed.webp" alt="XC Distance and Speed Recommendations">
             </div>
-            <div style="flex: 1; padding: 20px;">
+            <div>
                 <h2>XC Distance & Speed Recommendations 🎯</h2>
                 <p>Why just fly when you can conquer distances? <strong> <em>From speed hacks to perfect takeoff times
                             and strategic flight paths, </em></strong>Flowbaba turns you into the XC ninja you were born
@@ -294,78 +389,67 @@
             </div>
         </section>
 
-        <section id="daily-summary"
-            style="display: flex; flex-direction: row; align-items: center; padding: 20px; margin-left: 10%; margin-right: 10%;">
-            <div style="flex: 1; text-align: center;">
-                <img src="./assets/xc-glider-clouds-parting.webp" alt="Daily Summary"
-                    style="max-width: 80%; height: auto; border-radius: 10px; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);">
+        <section id="daily-summary">
+            <div>
+                <img src="./assets/xc-glider-clouds-parting.webp" alt="Daily Summary">
             </div>
-            <div style="flex: 1; padding: 20px;">
+            <div>
                 <h2>Daily Summary 🪂</h2>
                 <p>Ready, set, soar! With the day's vibe summed up, you'll know if it's <em>"go big or go home"</em> or
-                    <em>"snuggle with hot cocoa."</em> Flowbaba keeps it real, just like a wingman should.</p>
+                    <em>"snuggle with hot cocoa."</em> Flowbaba keeps it real, just like a wingman should.
+                </p>
             </div>
         </section>
 
-        <section id="flying-conditions"
-            style="display: flex; flex-direction: row-reverse; align-items: center; padding: 20px; margin-left: 10%; margin-right: 10%;">
-            <div style="flex: 1; text-align: center;">
-                <img src="./assets/flying-conditions.webp" alt="Flying Conditions"
-                    style="max-width: 80%; height: auto; border-radius: 10px; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);">
+        <section id="flying-conditions">
+            <div>
+                <img src="./assets/flying-conditions.webp" alt="Flying Conditions">
             </div>
-            <div style="flex: 1; padding: 20px;">
+            <div>
                 <h2>Sunshine on your face! 🌤️</h2>
                 <p>Thermals beneath your wings, and <em>the perfect window of flying hours!</em> Flowbaba knows when the
                     skies are your best friend. Let's make others jealous of your glide!</p>
             </div>
         </section>
 
-        <section id="wind-analysis"
-            style="display: flex; flex-direction: row; align-items: center; padding: 20px; margin-left: 10%; margin-right: 10%;">
-            <div style="flex: 1; text-align: center;">
-                <img src="./assets/wind-analysis.webp" alt="Wind Analysis"
-                    style="max-width: 80%; height: auto; border-radius: 10px; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);">
+        <section id="wind-analysis">
+            <div>
+                <img src="./assets/wind-analysis.webp" alt="Wind Analysis">
             </div>
-            <div style="flex: 1; padding: 20px;">
+            <div>
                 <h2>Feeling the breeze? 💨</h2>
                 <p>We've decoded wind speeds, directions, and those sneaky gusts. <em>It's like having a wind whisperer
                         tell you when to soar and when to hold your horses! </em></p>
             </div>
         </section>
 
-        <section id="weather-consistency"
-            style="display: flex; flex-direction: row-reverse; align-items: center; padding: 20px; margin-left: 10%; margin-right: 10%;">
-            <div style="flex: 1; text-align: center;">
-                <img src="./assets/weather-consistency.webp" alt="Weather Consistency"
-                    style="max-width: 80%; height: auto; border-radius: 10px; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);">
+        <section id="weather-consistency">
+            <div>
+                <img src="./assets/weather-consistency.webp" alt="Weather Consistency">
             </div>
-            <div style="flex: 1; padding: 20px;">
+            <div>
                 <h2>Rain, shine, or thunderstorms? 🌦️</h2>
                 <p>Flowbaba's your weather guru. We dish out visibility vibes and thunderstorm probabilities to keep you
                     cruising and not dodging rainclouds!</p>
             </div>
         </section>
 
-        <section id="cloud-base-and-altitude"
-            style="display: flex; flex-direction: row; align-items: center; padding: 20px; margin-left: 10%; margin-right: 10%;">
-            <div style="flex: 1; text-align: center;">
-                <img src="./assets/cloudbase-altitude.webp" alt="Cloud Base and Altitude"
-                    style="max-width: 80%; height: auto; border-radius: 10px; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);">
+        <section id="cloud-base-and-altitude">
+            <div>
+                <img src="./assets/cloudbase-altitude.webp" alt="Cloud Base and Altitude">
             </div>
-            <div style="flex: 1; padding: 20px;">
+            <div>
                 <h2>Cloud Base and Altitude Information ☁️</h2>
                 <p>From cloud cover gossip to boundary layer heights and thermal gradients, we've got your altimeter
                     covered. Fly like you own the sky! <em>Who needs a weather app when you have Flowbaba?</em></p>
             </div>
         </section>
 
-        <section id="thermal-strength"
-            style="display: flex; flex-direction: row-reverse; align-items: center; padding: 20px; margin-left: 10%; margin-right: 10%;">
-            <div style="flex: 1; text-align: center;">
-                <img src="./assets/thermal strength.webp" alt="Thermal Strength"
-                    style="max-width: 80%; height: auto; border-radius: 10px; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);">
+        <section id="thermal-strength">
+            <div>
+                <img src="./assets/thermal strength.webp" alt="Thermal Strength">
             </div>
-            <div style="flex: 1; padding: 20px;">
+            <div>
                 <h2>Thermal Strength 🔥</h2>
                 <p>Thermals so strong, they'll <em>lift your spirits, and your glider</em>. With CAPE values and updraft
                     velocities, Flowbaba's got the recipe for riding the currents like a boss.</p>
