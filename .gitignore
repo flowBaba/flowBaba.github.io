@@ -1,0 +1,44 @@
+# Node modules
+node_modules/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# Dependency directories
+jspm_packages/
+
+# Build directories
+dist/
+build/
+
+# Temporary files
+tmp/
+temp/
+
+# IDE specific files
+.vscode/
+.idea/
+
+# Mac specific files
+.DS_Store
+
+# Environment variables
+.env
+
+# Compiled files
+*.out
+*.class
+*.pyc
+*.pyo
+*.pyd
+
+# Coverage directory used by tools like istanbul
+coverage/
+
+# Miscellaneous
+*.swp
+*.swo
+
+_gitignore
