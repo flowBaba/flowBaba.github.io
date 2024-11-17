@@ -18,7 +18,8 @@
             font-family: 'Wotfard', sans-serif;
             margin: 0;
             /* background: linear-gradient(120deg, #FFFDF6, #F8F9F2, #FFFCF8); */
-            background: linear-gradient(120deg, #FBFBFB, #F8F9F2, #FFFDFB);
+            /* background: linear-gradient(120deg, #FBFBFB, #F8F9F2, #FFFDFB); */
+            background: linear-gradient(120deg, #fff9f9, #fffff8a8, #FFFDFB);
 
             color: #222;
             overflow-x: hidden;
@@ -51,6 +52,20 @@
             margin-top: 5px;
         }
 
+        .logo-section a {
+            display: inline-block;
+    cursor: pointer !important; /* Forces the pointer change */
+    text-decoration: none;
+}
+
+.logo-section a img {
+    display: block; /* Prevents gaps under the image */
+    pointer-events: auto !important;
+}
+a {
+    cursor: pointer !important;
+}
+
         .container {
             display: flex;
             flex-wrap: wrap;
@@ -68,18 +83,12 @@
         }
 
         .left h2 {
-            font-size: 2.6rem;
-            font-family: 'DynaPuff', cursive;
-            /* font-weight: bold; */
             font-weight: 400;
-            color: #343434;
-            margin-bottom: 20px;
-
             font-family: 'DynaPuff', cursive;
             font-size: 2.8rem;
             color: #343434;
             /* background: linear-gradient(90deg, #FF9A8B, #FF6F61); */
-            background: linear-gradient(90deg, #FD4F61, #FF6F61);
+            /* background: linear-gradient(90deg, #FD4F61, #FF6F61); */
             background: linear-gradient(-90deg, #ff683c, #ff734e);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -116,6 +125,8 @@
             transition: transform 0.3s ease, background 0.3s ease;
             border-radius: 5px;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            display: inline-block;
         }
 
         .cta a:hover {
@@ -140,11 +151,19 @@
             width: 300px;
             border-radius: 12px;
             transition: transform 0.3s ease;
+            display: block;
         }
 
         .right img:hover {
             transform: scale(1.05);
         }
+
+        .right a {
+    display: inline-block; /* Ensure the link wraps only the image */
+    text-decoration: none; /* Remove default underline for links */
+    cursor: pointer; /* Change pointer for better UX */
+}
+
 
         .features {
             margin-top: 80px;
@@ -205,6 +224,12 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+
+            /* background: linear-gradient(-90deg, #ff683c, #ff734e); */
+            /* background: linear-gradient(90deg, #ff683c, #f99169);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); */
         }
 
         .illustration section {
@@ -335,7 +360,9 @@
 
 <body>
     <div class="logo-section">
-        <img src="./assets/flowbaba-logo.png" alt="Flowbaba Logo" loading="lazy">
+        <a href="https://wa.me/message/I5GNAZWMU426A1" target="_blank">
+            <img src="./assets/flowbaba-logo.png" alt="Flowbaba Logo" loading="lazy">
+        </a>
         <!-- <p>flow with it!</p> -->
     </div>
     <div class="container">
@@ -349,9 +376,11 @@
                 left behind—join the pilots who fly smarter, not harder. We are relentlessly improving, everyday!</p>
         </div>
         <div class="right">
-            <img src="./assets/flowbaba-wa-qr-transparent.png" alt="WhatsApp QR Code for Flowbaba" loading="lazy">
+            <a href="https://wa.me/message/I5GNAZWMU426A1" target="_blank">
+                <img src="./assets/flowbaba-wa-qr-transparent.png" alt="WhatsApp QR Code for Flowbaba" loading="lazy">
+            </a>
             <div class="cta">
-                <a href="#">Say 'Hi' for a forecast!</a>
+                <a href="https://wa.me/message/I5GNAZWMU426A1" target="_blank">Say 'Hi' for a forecast!</a>
             </div>
         </div>
     </div>
